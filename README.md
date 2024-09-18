@@ -1,15 +1,15 @@
-# other String Methods Lab
+# Other String Methods Lab
 
 ## Pre-Requisites
 You are expected to review the `String Basics` written lecture prior to working on this lab.
 
 ## Description
-In this exercise, you will practice looking at Java documentation to further your understanding how to use Strings. 
+In this exercise, you will practice looking at Java documentation to further your understanding how to use Strings. Here's the link to Java's String class documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html 
+
+While completing this lab, you can use it as a reference. Once you open the website, scroll down to the "Method Summary" section to find the relevant methods you'll need to use. 
 
 ## Completing the Lab
 You will be editing the file `OtherStringMethods.java`. This file can be found under the `src/main/java` package. Review the file's code and code comments for further instructions.
-
-You will also need to open up Java's official documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html as a reference for this lab. Once you open the website, scroll down to the "Method Summary" section to find the relevant methods you'll need to use. 
 
 Tasks to complete within the `OtherStringMethods.java` file:
 - [ ] Revise the return statement of the method named `partOfString` so that it returns the correct string value.
