@@ -11,14 +11,19 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * the substring of "banana", starting at 0 inclusive and ending at 3 exclusive, is "ban".
+     * Tests the partOfString() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if partOfString() receives a value of "banana", with a starting index of 0 (inclusive) and an ending index of 3 (exclusive), it returns "ban".
      */
     @Test
     public void partOfStringTest1(){
         Assert.assertEquals(osm.partOfString("banana", 0, 3), "ban");
     }
+    
     /**
-     * the substring of "apple", starting at 1 inclusive and ending at 5 exclusive, is "pple".
+     * Tests the partOfString() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if partOfString() receives a value of "apple", with a starting index of 1 (inclusive) and an ending index of 5 (exclusive), it returns "pple".
      */
     @Test
     public void partOfStringTest2(){
@@ -26,7 +31,9 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * Banana is after apple in the dictionary, so compareTo should return a value greater than 0.
+     * Tests the compareLexigraphically() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if compareLexigraphically() compares "banana" to "apple", it should return a value greater than 0 because "banana" should come after "apple".
      */
     @Test
     public void compareToTest1(){
@@ -34,7 +41,9 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * Monkey is before penguin in the dictionary, so compareTo should return a value less than 0.
+     * Tests the compareLexigraphically() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if compareLexigraphically() compares "monkey" to "penguin", it should return a value less than 0 because "monkey" should come before "penguin".
      */
     @Test
     public void compareToTest2(){
@@ -42,7 +51,9 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * java is equivalent to java, so compareTo should return 0.
+     * Tests the compareLexigraphically() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if compareLexigraphically() compares "java" to "java", it should return a value of 0 because both strings are equivalent.
      */
     @Test
     public void compareToTest3(){
@@ -50,7 +61,9 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * "banana apple pear" split around " " should return {"banana", "apple", "pear"}.
+     * Tests the splitStringIntoMultipleStrings() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if splitStringIntoMultipleStrings() splits the string "banana apple pear" around " " (a single space), it should return the array {"banana", "apple", "pear"}.
      */
     @Test
     public void splitStringTest1(){
@@ -61,13 +74,17 @@ public class OtherStringMethodsTest {
     }
 
     /**
-     * "src.main.java" split around "." should return {"src", "main", "java"}.
-     * the two backwards slashes prevent the period from being interpreted as a regex expression.
+     * Tests the splitStringIntoMultipleStrings() method of the OtherStringMethods class.
+     * 
+     * This test verifies that, if splitStringIntoMultipleStrings() splits the string "src.main.java" around "." (a single period), it should return the array {"src", "main", "java"}.
      */
     @Test
     public void splitStringTest2(){
         String input = "src.main.java";
+
+        // The two backwards slashes prevent the period from being interpreted as a regex expression.
         String splitAround = "\\.";
+        
         String[] expected = {"src", "main", "java"};
         Assert.assertArrayEquals(osm.splitStringIntoMultipleStrings(input, splitAround), expected);
     }
